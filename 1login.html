@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>login to wanderspot</title>
+<style>* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(m2.webp);
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    padding: 1.5em;
+    background-color: #6a5956;
+
+    color: #fff;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    padding: 2em;
+}
+
+.desti, .order-form {
+    width: 45%;
+    background-color: #fff;
+    padding: 1.5em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.desti h2, .order-form h2 {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+.desti ul, .order-form ul {
+    list-style: none;
+}
+
+.destiny, .price {
+    display: inline-block;
+}
+
+.price {
+    float: right;
+    color: #92706a;
+    font-weight: bold;
+}
+
+button {
+    margin-top: 0.5em;
+    padding: 0.5em 1em;
+    background-color: #a36b61;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ab7b6a;
+}
+
+form label {
+    display: block;
+    margin-top: 1em;
+}
+
+form input {
+    width: 100%;
+    padding: 0.5em;
+    margin-top: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    margin-top: 1em;
+    width: 100%;
+}
+footer {
+    background:rgb(189, 161, 161);
+    color: #000000;
+    text-align: center;
+    padding: 10px 0;
+
+    bottom: 0;
+    width: 100%;
+}
+
+</style>
+</head>
+<body>
+
+<header>
+    <h1>WANDERSPOT&#127759</h1>
+    <h2>("Where Wonder Await")</h2>
+    <h2 style="color: #f7e7ea;">"FIND YOUR PATH, BOOK YOUR JOURNEY"</h2>
+</header>
+
+<main>
+
+    <section class="desti">
+    <h2>DESTINATIONS</h2>
+    <ul>
+        <li>
+            <div class="destiny">
+                <span><b>Home:</b></span>
+                <a href="home.html"><button onclick="addtoorder">click here to view all destinations</button></a>
+            </div>
+        </li><br>
+        <li>
+        <div class="destiny">
+            <span><b>WORLD:</b></span><br>
+            <span class="price"></span>
+        </div>
+        <a href="world.html"><button onclick="addToOrder('Pizza', 12)">Click here </button>
+        </div></button></a>
+        </li><br>
+        <li>
+        <div class="destiny">
+            <span><b>INDIA:</b></span>
+            <span class="price"></span>
+        </div>
+        <a href="india.html"><button onclick="addToOrder('Pasta', 10)">Click here</button>
+        </div></button></a>
+        </li><br>
+        <li>
+        <div class="destiny">
+            <span><b>DEVOTIONAL:</b></span>
+            <span class="price"></span>
+        </div>
+        <a href="Devotional.html"><button onclick="addToOrder('Salad', 8)">Click here</button>
+        </div></button></a>
+        </li><br>
+        <li>
+            <div class="destiny">
+                <span><b>CULTURAL AND HISTORICAL:</b></span>
+            <a href="culturalandhistorical.html"> <button onclick="addToOrder">Click here </button>
+            </div></a>
+        </li><br>
+    </ul>
+    </section>             
+
+
+    <section class="order-form">
+    <h2>Your TRIP</h2>
+    <ul id="orderList"></ul>
+    
+    <h3>Customer Details</h3>
+    <form id="customerForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required>
+
+        <button type="submit">Submit </button>
+    </form>
+    </section>
+</main>
+<footer>
+<b> <p>Contact Us:91xxxxxxxx</p></b>
+</footer>
+
+
+</body>
+</html>
